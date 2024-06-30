@@ -171,6 +171,13 @@ namespace floatTetWild {
 
         Vector3 min, max;
         get_bb_corners(params, input_vertices, min, max);
+
+        // @sanghyun: make bbox to be a cube, not a cuboid
+        Vector3 bb_center = (min + max) / 2;
+        Scalar max_diag = (max - min).maxCoeff();
+        min = bb_center - (Vector3::Ones() * max_diag / 2);
+        max = bb_center + (Vector3::Ones() * max_diag / 2);
+
         mesh.params.bbox_min = min;
         mesh.params.bbox_max = max;
 

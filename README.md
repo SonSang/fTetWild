@@ -1,3 +1,7 @@
+# Sanghyun's Fix
+
+Changed the domain of tetrahedralization to a cube, not a cuboid.
+
 # Fast Tetrahedral Meshing in the Wild
 ![](./figs/1k.jpg)
 
